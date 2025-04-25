@@ -3,7 +3,8 @@
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 # 1. Clone the repo
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/Sweety-0406/crypto-tracker)
+git clone [https://github.com/Sweety-0406/crypto-tracker](https://github.com/Sweety-0406/crypto-tracker)
+
 cd crypto-tracker
 
 # 2. Install dependencies
