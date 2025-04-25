@@ -44,6 +44,6 @@ export const sampleAssets: CryptoAsset[] = [
     volume24h: '$78,000,000,000',
     circulatingSupply: '104B USDT',
     maxSupply: 'N/A',
-    chartImage: '/chart-placeholder-stable.svg',
+    chartImage: '/chart-placeholder-up.svg',
   },
 ];

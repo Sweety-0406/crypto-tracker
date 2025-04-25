@@ -15,7 +15,7 @@ export default function CryptoTable() {
   const formatNumber = (num: number) => num.toLocaleString(undefined, { maximumFractionDigits: 2 });
 
   const renderChange = (value: number) => (
-    <div className={`flex items-center gap-1 ${value >= 0 ? 'text-green-600' : 'text-red-500'}`}>
+    <div className={`flex items-center gap-1 ${value >= 0 ? 'green' : 'red'}`}>
       {value >= 0 ? <ArrowUpRight size={14} /> : <ArrowDownRight size={14} />}
       {Math.abs(value).toFixed(2)}%
     </div>
@@ -25,7 +25,7 @@ export default function CryptoTable() {
     <div className="overflow-x-auto">
       <table className="min-w-full text-sm text-left border-collapse">
         <thead>
-          <tr className="text-gray-500 border-b text-xs uppercase tracking-wider">
+          <tr className="gray border-b text-xs uppercase tracking-wider">
             <th className="p-3">#</th>
             <th className="p-3">Name</th>
             <th className="p-3">Price</th>
@@ -42,23 +42,23 @@ export default function CryptoTable() {
           {assets.map((asset, i) => (
             <tr key={asset.id} className="border-b hover:bg-gray-50 transition text-sm">
                 <td className="p-3 font-medium">{i + 1}</td>
-                <td className="p-3 flex items-center gap-2">
-                    <div className="w-5 h-5 border rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                <td className="p-3 flex items-center gap-3">
+                    <div className="size  rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
                         <img
                         src={asset.logo}
                         alt={asset.symbol}
-                        className="w-full h-full object-contain"
+                        className="size"
                         />
                     </div>
-                    <div className="flex flex-col">
-                        <span className="font-semibold">{asset.name}</span>
-                        <span className="text-xs text-gray-500">{asset.symbol}</span>
+                    <div className="flex flex-col symbol">
+                        <span >{asset.name}</span>
+                        <span >{asset.symbol}</span>
                     </div>
                 </td>
-                <td className={`p-3 ${asset.price>=0? "text-green-600": "text-red-600"}`}>${formatNumber(asset.price)}</td>
-                <td className={`p-3 ${asset.change1h>=0? "text-green-600": "text-red-600"}`}>{renderChange(asset.change1h)}</td>
-                <td className={`p-3 ${asset.change24h>=0? "text-green-600": "text-red-600"}`}>{renderChange(asset.change24h)}</td>
-                <td className={`p-3 ${asset.change7d>=0? "text-green-600": "text-red-600"}`}>{renderChange(asset.change7d)}</td>
+                <td className={`p-3 `}>${formatNumber(asset.price)}</td>
+                <td className={`p-3`}>{renderChange(asset.change1h)}</td>
+                <td className={`p-3`}>{renderChange(asset.change24h)}</td>
+                <td className={`p-3`}>{renderChange(asset.change7d)}</td>
                 <td className="p-3">${(asset.marketCap)}</td>
                 <td className="p-3">${(asset.volume24h)}</td>
                 <td className="p-3">{(asset.circulatingSupply)} {asset.symbol}</td>

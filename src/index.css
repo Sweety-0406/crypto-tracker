@@ -4,6 +4,21 @@
 
 
 
-/* body {
-  @apply bg-white text-gray-900 font-sans;
-} */
+
+.green{
+  color: rgb(0, 255, 34);
+}
+.red{
+  color: brown;
+}
+.gray{
+  color: rgb(100, 98, 98);
+}
+.symbol{
+  color: rgb(100, 98, 98);
+  font-size: 15px;
+  padding-left: 8px;
+}
+.size{
+  width: 25px;
+}
